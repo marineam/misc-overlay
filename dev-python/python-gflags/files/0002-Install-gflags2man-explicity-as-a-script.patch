@@ -1,0 +1,27 @@
+From 82d0d9711eae8ddc550786761fa7a24e50822958 Mon Sep 17 00:00:00 2001
+From: Michael Marineau <mike@marineau.org>
+Date: Thu, 27 Jun 2013 18:58:06 -0400
+Subject: [PATCH 2/3] Install gflags2man explicity as a script.
+
+This ensures that the correct python version gets used, etc.
+
+http://code.google.com/p/python-gflags/issues/detail?id=12
+---
+ setup.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/setup.py b/setup.py
+index 573db2d..ddad318 100755
+--- a/setup.py
++++ b/setup.py
+@@ -39,6 +39,6 @@ setup(name='python-gflags',
+       author_email='google-gflags@googlegroups.com',
+       url='http://code.google.com/p/python-gflags',
+       py_modules=["gflags", "gflags_validators"],
+-      data_files=[("bin", ["gflags2man.py"])],
++      scripts=["gflags2man.py"],
+       include_package_data=True,
+       )
+-- 
+1.8.1.5
+
