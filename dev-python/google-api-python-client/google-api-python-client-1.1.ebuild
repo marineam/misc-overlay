@@ -16,10 +16,10 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-RDEPEND="${PYTHON_DEPS}"
-DEPEND="${PYTHON_DEPS}
+RDEPEND="${PYTHON_DEPS}
 	>=dev-python/httplib2-0.8[${PYTHON_USEDEP}]
-	dev-python/python-gflags[${PYTHON_USEDEP}]
+	dev-python/python-gflags[${PYTHON_USEDEP}]"
+DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]"
 
 DOCS=( CHANGELOG README )
