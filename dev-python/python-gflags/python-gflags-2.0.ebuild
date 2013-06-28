@@ -34,6 +34,7 @@ PATCHES=(
 	"${FILESDIR}"/${P}-test-updates-for-python-2.7.patch
 
 	# One unit test currently fails if run as root.
+	# http://code.google.com/p/python-gflags/issues/detail?id=14
 	"${FILESDIR}"/${P}-skip-permission-test-as-root.patch
 )
 
