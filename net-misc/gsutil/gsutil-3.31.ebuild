@@ -31,3 +31,8 @@ RDEPEND="${DEPEND}
 S=${WORKDIR}/${PN}
 DOCS=( README.md ReleaseNotes.txt )
 PATCHES=( ${FILESDIR}/${P}-use-friendy-version-checks.patch )
+
+python_test() {
+	export BOTO_CONFIG=${FILESDIR}/dummy.boto
+	${PYTHON} gslib/__main__.py test -u
+}
