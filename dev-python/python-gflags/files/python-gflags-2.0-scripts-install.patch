@@ -1,11 +1,10 @@
-From 82d0d9711eae8ddc550786761fa7a24e50822958 Mon Sep 17 00:00:00 2001
-From: Michael Marineau <mike@marineau.org>
-Date: Thu, 27 Jun 2013 18:58:06 -0400
-Subject: [PATCH 2/3] Install gflags2man explicity as a script.
+From d544cdad63faa5a53ba524e39f091f4a18e1eeb8 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Micha=C5=82=20G=C3=B3rny?= <mgorny@gentoo.org>
+Date: Sun, 16 Dec 2012 16:27:13 +0100
+Subject: [PATCH] Install Python scripts using 'scripts' key.
 
-This ensures that the correct python version gets used, etc.
-
-http://code.google.com/p/python-gflags/issues/detail?id=12
+This is necessary to ensure that the shebangs are properly replaced when
+installing for multiple Python implementations.
 ---
  setup.py | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
@@ -23,5 +22,5 @@ index 573db2d..ddad318 100755
        include_package_data=True,
        )
 -- 
-1.8.1.5
+1.8.0.2
 

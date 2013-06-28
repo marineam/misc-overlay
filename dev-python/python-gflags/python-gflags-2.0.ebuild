@@ -1,36 +1,48 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gflags/python-gflags-2.0.ebuild,v 1.5 2012/12/17 19:59:53 mgorny Exp $
 
-EAPI=5
-PYTHON_COMPAT=( python{2_5,2_6,2_7} )
+EAPI="5"
+
+PYTHON_COMPAT=( python{2_5,2_6,2_7} pypy{1_8,1_9} )
 
 inherit distutils-r1
 
-DESCRIPTION="Commandline flags module for Python, equivalent to gflags for C++"
-HOMEPAGE="http://code.google.com/p/python-gflags"
+DESCRIPTION="Google's Python argument parsing library"
+HOMEPAGE="http://code.google.com/p/python-gflags/"
 SRC_URI="http://python-gflags.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="${PYTHON_DEPS}"
-DEPEND="${PYTHON_DEPS}
-	dev-python/setuptools[${PYTHON_USEDEP}]"
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
+RDEPEND=""
 
 PATCHES=(
-	${FILESDIR}/0001-Unit-test-updates-for-Python-2.7-compatibility.patch
-	${FILESDIR}/0002-Install-gflags2man-explicity-as-a-script.patch
-	${FILESDIR}/0003-Skip-a-permissions-check-when-running-as-root.patch
+	# The scripts are installed as 'data' rather than scripts.
+	# http://code.google.com/p/python-gflags/issues/detail?id=12
+	"${FILESDIR}"/${P}-scripts-install.patch
+
+	# Tests try to write to /tmp (sandbox).
+	# http://code.google.com/p/python-gflags/issues/detail?id=13
+	"${FILESDIR}"/${P}-tests-respect-tmpdir.patch
+
+	# Fix unit tests with Python 2.7
+	# http://code.google.com/p/python-gflags/source/detail?r=41
+	"${FILESDIR}"/${P}-test-updates-for-python-2.7.patch
+
+	# One unit test currently fails if run as root.
+	"${FILESDIR}"/${P}-skip-permission-test-as-root.patch
 )
 
-DOCS=( ChangeLog NEWS README )
-
 python_test() {
-	local testsuite
-	for testsuite in tests/*.py; do
-		${PYTHON} ${testsuite} || die
+	local t
+
+	cd tests || die
+	for t in *.py; do
+		# (it's ok to run the gflags_googletest.py too)
+		"${PYTHON}" "${t}" || die "Tests fail with ${EPYTHON}"
 	done
 }
