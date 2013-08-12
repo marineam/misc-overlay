@@ -30,9 +30,13 @@ RDEPEND="${DEPEND}
 
 S=${WORKDIR}/${PN}
 DOCS=( README.md CHANGES.md )
-PATCHES=( ${FILESDIR}/${P}-use-friendy-version-checks.patch )
+PATCHES=(
+	${FILESDIR}/${P}-use-friendy-version-checks.patch
+	${FILESDIR}/${P}-Fix-update-tests-that-fail-for-package-installs.patch
+	${FILESDIR}/${P}-Fix-test-using-glob-with-ObjectToURI.patch
+)
 
 python_test() {
 	export BOTO_CONFIG=${FILESDIR}/dummy.boto
-	${PYTHON} gslib/__main__.py test -u
+	${PYTHON} gslib/__main__.py test -u || die "tests failed"
 }
