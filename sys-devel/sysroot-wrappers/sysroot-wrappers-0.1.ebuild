@@ -4,18 +4,11 @@
 
 EAPI=5
 
-inherit autotools git-2
-
 DESCRIPTION="Build tool wrappers for using custom SYSROOTs"
 HOMEPAGE="https://github.com/coreos/sysroot-wrappers"
-EGIT_REPO_URI="https://github.com/coreos/sysroot-wrappers"
-SRC_URI=""
+SRC_URI="https://github.com/coreos/${PN}/releases/download/v${PV}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="-*"
+KEYWORDS="~amd64"
 IUSE=""
-
-src_prepare() {
-	eautoreconf
-}
