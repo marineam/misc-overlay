@@ -41,7 +41,7 @@ HOMEPAGE="http://www.gnu.org/software/grub/"
 
 LICENSE="GPL-3"
 SLOT="2"
-IUSE="custom-cflags debug device-mapper doc efiemu mount +multislot nls static sdl test truetype libzfs"
+IUSE="custom-cflags debug device-mapper doc efiemu mount +multislot nls static sdl test truetype libzfs +welcome"
 
 GRUB_ALL_PLATFORMS=(
 	# everywhere:
@@ -142,6 +142,9 @@ pkg_pretend() {
 
 src_prepare() {
 	[[ ${PATCHES} ]] && epatch "${PATCHES[@]}"
+	if [[ ${PV} != 9999 ]] && use !welcome; then
+		epatch "${FILESDIR}/${P}-no-welcome-msg.patch"
+	fi
 	sed -i -e /autoreconf/d autogen.sh || die
 	if use multislot; then
 		# fix texinfo file name, bug 416035
