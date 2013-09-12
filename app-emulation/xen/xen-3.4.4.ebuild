@@ -13,9 +13,15 @@ SRC_URI="http://bits.xensource.com/oss-xen/release/${PV}/xen-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="debug custom-cflags pae acm flask xsm"
+IUSE="debug custom-cflags pae acm flask xsm multislot"
 
-PDEPEND="~app-emulation/xen-tools-${PV}"
+if use multislot ; then
+	SLOT="${PV}"
+else
+	SLOT="0"
+	PDEPEND="~app-emulation/xen-tools-${PV}"
+fi
+
 PATCHES=(
 	"${FILESDIR}/"${P}-werror.patch
 )
@@ -92,6 +98,11 @@ src_install() {
 	use pae && myopt="${myopt} pae=y"
 
 	emake LDFLAGS="$(raw-ldflags)" DESTDIR="${D}" -C xen ${myopt} install || die "install failed"
+
+	# Remove potentially conflicting symlinks for multislot
+	if use multislot ; then
+		find "${D}"/boot -type l -delete || die
+	fi
 }
 
 pkg_postinst() {
