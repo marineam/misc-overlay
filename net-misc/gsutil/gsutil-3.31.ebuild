@@ -26,6 +26,7 @@ RDEPEND="${DEPEND}
 	dev-python/python-gflags[${PYTHON_USEDEP}]
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	dev-python/socksipy-branch[${PYTHON_USEDEP}]
+	!>=dev-python/boto-2.9.13[${PYTHON_USEDEP}]
 	"
 
 S=${WORKDIR}/${PN}
