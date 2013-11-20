@@ -18,7 +18,7 @@ IUSE=""
 
 DEPEND="${PYTHON_DEPS}"
 RDEPEND="${DEPEND}
-	>=dev-python/boto-2.9.13[${PYTHON_USEDEP}]
+	>=dev-python/boto-2.13.0[${PYTHON_USEDEP}]
 	>=dev-python/crcmod-1.7
 	>=dev-python/httplib2-0.8[${PYTHON_USEDEP}]
 	>=dev-python/pyopenssl-0.13[${PYTHON_USEDEP}]
