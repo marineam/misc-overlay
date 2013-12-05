@@ -112,9 +112,15 @@ src_configure() {
 	# so we cannot disable them
 	myconf="${myconf} --with-mirrors=internal"
 	myconf="${myconf} --with-snapshots=internal"
-	use thin \
-		&& myconf="${myconf} --with-thin=internal" \
-		|| myconf="${myconf} --with-thin=none"
+
+	if use thin; then
+		myconf="${myconf} --with-thin=internal"
+		myconf="${myconf} --with-thin-check=${EPREFIX}/sbin/thin_check"
+		myconf="${myconf} --with-thin-dump=${EPREFIX}/sbin/thin_dump"
+		myconf="${myconf} --with-thin-repair=${EPREFIX}/sbin/thin_repair"
+	else
+		myconf="${myconf} --with-thin=none"
+	fi
 
 	if use lvm1; then
 		myconf="${myconf} --with-lvm1=${buildmode}"
