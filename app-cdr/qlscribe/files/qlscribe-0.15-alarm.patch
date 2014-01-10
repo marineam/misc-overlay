@@ -1,0 +1,10 @@
+--- qlscribe-0.15/lscribed/main.cpp.orig	2014-01-09 20:08:08.459998399 -0500
++++ qlscribe-0.15/lscribed/main.cpp	2014-01-09 20:08:25.949998397 -0500
+@@ -23,6 +23,7 @@
+ #include <signal.h>
+ #include <stdlib.h>
+ #include <syslog.h>
++#include <unistd.h>
+ 
+ #include "lscribed.h"
+ #include "dbuscpp.h"
