@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/Attic/xen-3.4.2-r4.ebuild,v 1.4 2012/05/13 17:25:20 pacho dead $
 
-EAPI=2
+EAPI=5
 
 inherit mount-boot flag-o-matic toolchain-funcs base
 
@@ -11,16 +11,12 @@ HOMEPAGE="http://xen.org/"
 SRC_URI="http://bits.xensource.com/oss-xen/release/${PV}/xen-${PV}.tar.gz"
 
 LICENSE="GPL-2"
-SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="debug custom-cflags pae acm flask xsm multislot"
+IUSE="debug custom-cflags pae acm flask xsm"
 
-if use multislot ; then
-	SLOT="${PV}"
-else
-	SLOT="0"
-	PDEPEND="~app-emulation/xen-tools-${PV}"
-fi
+SLOT="${PV}"
+#SLOT="0"
+#PDEPEND="~app-emulation/xen-tools-${PV}"
 
 PATCHES=(
 	"${FILESDIR}/"${P}-werror.patch
@@ -99,19 +95,6 @@ src_install() {
 
 	emake LDFLAGS="$(raw-ldflags)" DESTDIR="${D}" -C xen ${myopt} install || die "install failed"
 
-	# Remove potentially conflicting symlinks for multislot
-	if use multislot ; then
-		find "${D}"/boot -type l -delete || die
-	fi
-}
-
-pkg_postinst() {
-	elog "Official Xen Guide and the unoffical wiki page:"
-	elog " http://www.gentoo.org/doc/en/xen-guide.xml"
-	elog " http://en.gentoo-wiki.com/wiki/Xen/"
-
-	if use pae; then
-		echo
-		ewarn "This is a PAE build of Xen. It will *only* boot PAE kernels!"
-	fi
+	# Remove potentially conflicting symlinks
+	find "${D}"/boot -type l -delete || die
 }
