@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="doc static-libs"
 
-RDEPEND="dev-libs/libzip
+RDEPEND=">=app-crypt/ccid-1.4.10[usb]
+	dev-libs/libzip
 	sys-apps/pcsc-lite"
 DEPEND="${RDEPEND}
 	dev-util/gengetopt
