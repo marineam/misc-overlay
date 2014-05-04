@@ -51,6 +51,8 @@ src_prepare() {
 		'ask-password sed failed'
 	sed -i 's:/bin/udevadm:/usr/bin/udevadm:g' \
 		systemd-units/plymouth-start.service.in || die 'udevadm sed failed'
+	sed -i "s:SYSTEMD_UNIT_DIR=.*:SYSTEMD_UNIT_DIR=$(systemd_get_unitdir):" \
+		configure.ac || die 'configure sed failed'
 	autotools-utils_src_prepare
 }
 
