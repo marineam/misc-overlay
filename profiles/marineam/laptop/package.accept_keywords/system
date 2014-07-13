@@ -1,0 +1,5 @@
+sys-boot/gummiboot
+sys-kernel/dracut
+
+# first version with rngd.service
+=sys-apps/rng-tools-4-r7

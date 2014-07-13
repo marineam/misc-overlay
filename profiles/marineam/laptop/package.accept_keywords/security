@@ -1,0 +1,7 @@
+sys-auth/yubikey-personalization-gui
+sys-auth/ykpers
+sys-auth/libyubikey
+sys-auth/libykneomgr
+
+# required by sys-auth/libykneomgr
+=dev-util/gengetopt-2.22.6
