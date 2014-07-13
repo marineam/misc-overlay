@@ -1,5 +1,5 @@
 CHOST="x86_64-pc-linux-gnu"
-CFLAGS="-O2 -pipe -march=core-avx-i"
+CFLAGS="-O2 -pipe -march=core-avx-i -g"
 CXXFLAGS="${CFLAGS}"
 
 # CPU
@@ -16,4 +16,4 @@ INPUT_DEVICES="evdev synaptics"
 USE="${USE} -input_devices_keyboard -input_devices_mouse"
 
 LINGUAS="en en_US"
-FEATURES="parallel-install"
+FEATURES="parallel-install splitdebug"
