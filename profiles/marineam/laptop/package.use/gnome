@@ -1,4 +1,2 @@
 gnome-base/gnome -classic
 gnome-base/gnome-extra-apps -games -tracker
-
-x11-misc/redshift geoclue
