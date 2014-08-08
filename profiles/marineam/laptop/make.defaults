@@ -11,6 +11,9 @@ USE="${USE} -gpm -ldap -sendmail"
 # Basic system options
 USE="${USE} cryptsetup wifi"
 
+# Terminal / Shell / CLI tools
+USE="${USE} bash-completion vim-syntax"
+
 #VIDEO_CARDS="intel"
 INPUT_DEVICES="evdev synaptics"
 USE="${USE} -input_devices_keyboard -input_devices_mouse"
