@@ -1,8 +1,11 @@
+net-misc/gcutil
 net-misc/gsutil
 
 =dev-python/crcmod-1.7-r1
 =dev-python/google-api-python-client-1.2
+=dev-python/google-apputils-0.4.0
 =dev-python/httplib2-0.8
+=dev-python/iso8601-0.1.10
 =dev-python/python-gflags-2.0
 =dev-python/retry-decorator-1.0.0
 =dev-python/socksipy-1.02
