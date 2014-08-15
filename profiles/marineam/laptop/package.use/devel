@@ -1,1 +1,2 @@
 dev-vcs/git tk
+app-emulation/qemu virtfs xattr
