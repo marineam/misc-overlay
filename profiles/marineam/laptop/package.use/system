@@ -1,1 +1,2 @@
 sys-fs/lvm2 -lvm1 -thin
+net-print/cups zeroconf
