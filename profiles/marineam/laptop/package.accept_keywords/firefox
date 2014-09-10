@@ -1,3 +1,4 @@
 www-client/firefox
 
 =media-libs/mesa-10.2*
+=x11-libs/libdrm-2.4.54
