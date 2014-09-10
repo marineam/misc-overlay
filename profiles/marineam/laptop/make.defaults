@@ -20,6 +20,7 @@ USE="${USE} dhclient -dhcpcd"
 #VIDEO_CARDS="intel"
 INPUT_DEVICES="evdev synaptics"
 USE="${USE} -input_devices_keyboard -input_devices_mouse"
+QEMU_SOFTMMU_TARGETS="x86_64 i386"
 
 LINGUAS="en en_US"
 FEATURES="parallel-install splitdebug"
