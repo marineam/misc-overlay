@@ -9,7 +9,7 @@ USE="avx mmx sse sse2 sse3 ssse3 sse4_1 sse4_2"
 USE="${USE} -gpm -ldap -sendmail"
 
 # Basic system options
-USE="${USE} cryptsetup wifi xvmc"
+USE="${USE} cryptsetup wifi vaapi vdpau xvmc"
 
 # Terminal / Shell / CLI tools
 USE="${USE} bash-completion vim-syntax"
