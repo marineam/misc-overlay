@@ -65,7 +65,7 @@ src_prepare() {
 		"${FILESDIR}/${PN}-6.30.223.141-gcc.patch" \
 		"${FILESDIR}/${PN}-6.30.223.141-linux-3.15.patch" \
 		"${FILESDIR}/${PN}-6.30.223.248-linux-3.17.patch" \
-		"${FILESDIR}/${PN}-6.30.223.248-linux-3.18.patch
+		"${FILESDIR}/${PN}-6.30.223.248-linux-3.18.patch"
 
 	epatch_user
 }
