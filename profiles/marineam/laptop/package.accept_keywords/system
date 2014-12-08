@@ -3,3 +3,6 @@ sys-kernel/dracut
 
 # first version with rngd.service
 =sys-apps/rng-tools-4-r7
+
+# printers...
+=net-print/hplip-3.14.10
