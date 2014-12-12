@@ -3,6 +3,7 @@ net-misc/gsutil
 
 =dev-python/boto-2.31.1
 =dev-python/crcmod-1.7-r1
+=dev-python/crcmod-1.7-r2
 =dev-python/gcs-oauth2-boto-plugin-1.7
 =dev-python/gcs-oauth2-boto-plugin-1.8
 =dev-python/google-api-python-client-1.2
