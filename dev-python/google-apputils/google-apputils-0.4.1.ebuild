@@ -3,13 +3,13 @@
 # $Header: $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_5,2_6,2_7} )
+PYTHON_COMPAT=( python{2_6,2_7} )
 
 inherit distutils-r1
 
 DESCRIPTION="Google Application Utilities for Python"
 HOMEPAGE="http://code.google.com/p/google-apputils-python/"
-SRC_URI="http://google-apputils-python.googlecode.com/files/${P}.tar.gz"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
@@ -26,6 +26,8 @@ RDEPEND="${PYTHON_DEPS}
 	)"
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]"
+
+PATCHES=( "${FILESDIR}"/0.4.1-remove-broken-ez_setup-import.patch )
 
 DOCS=( README )
 
