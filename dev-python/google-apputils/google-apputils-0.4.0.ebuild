@@ -17,7 +17,7 @@ KEYWORDS="~amd64"
 IUSE="test"
 
 RDEPEND="${PYTHON_DEPS}
-    >=dev-python/python-dateutil-1.4:python-2
+    dev-python/python-dateutil[${PYTHON_USEDEP}]
 	dev-python/python-gflags[${PYTHON_USEDEP}]
 	dev-python/pytz[${PYTHON_USEDEP}]
 	test? (
