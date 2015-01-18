@@ -1,1 +1,4 @@
 dev-util/perf
+
+# Allow ABI_X86=32
+sys-libs/zlib

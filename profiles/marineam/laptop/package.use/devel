@@ -1,2 +1,4 @@
 dev-vcs/git tk
 app-emulation/qemu virtfs xattr
+
+sys-libs/zlib abi_x86_32
