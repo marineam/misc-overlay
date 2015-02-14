@@ -1,4 +1,11 @@
 dev-util/perf
 
+# For Gerrit
+dev-python/git-review
+=dev-python/pbr-0.8.2
+
 # Allow ABI_X86=32
 sys-libs/zlib
+
+# for building shim
+app-crypt/pesign
