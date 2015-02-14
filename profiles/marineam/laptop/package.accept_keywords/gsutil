@@ -9,6 +9,7 @@ net-misc/gsutil
 =dev-python/httplib2-0.8
 =dev-python/iso8601-0.1.10
 =dev-python/oauth2client-1.4.2
+=dev-python/oauth2client-1.4.6
 =dev-python/python-gflags-2.0
 =dev-python/retry-decorator-1.0.0
 =dev-python/rsa-3.1.4-r1
