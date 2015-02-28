@@ -1,2 +1,5 @@
+sys-apps/systemd
 sys-boot/gummiboot
 sys-kernel/dracut
+
+~sys-apps/util-linux-2.25.2
