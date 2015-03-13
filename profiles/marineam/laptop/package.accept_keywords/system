@@ -3,3 +3,4 @@ sys-boot/gummiboot
 sys-kernel/dracut
 
 ~sys-apps/util-linux-2.25.2
+~sys-apps/util-linux-2.26.1

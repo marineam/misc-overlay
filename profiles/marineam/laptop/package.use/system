@@ -6,3 +6,5 @@ net-print/hplip scanner snmp
 
 media-gfx/sane-backends avahi
 net-dns/avahi utils
+
+sys-apps/systemd curl elfutils gcrypt http importd lzma nat
