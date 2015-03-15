@@ -1,10 +1,9 @@
 sys-fs/lvm2 -lvm1 -thin
 
-net-print/cups zeroconf
 # snmp enables all networking support... damnit gentoo...
 net-print/hplip scanner snmp
 
 media-gfx/sane-backends avahi
-net-dns/avahi utils
+net-dns/avahi autoipd mdnsresponder-compat utils
 
 sys-apps/systemd curl elfutils gcrypt http importd lzma nat
