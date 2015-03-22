@@ -7,13 +7,13 @@ USE=""
 USE="${USE} -gpm -ldap -sendmail"
 
 # Basic system options
-USE="${USE} cryptsetup wifi vaapi vdpau xvmc"
+USE="${USE} cryptsetup wifi vaapi vdpau xvmc hidpi"
 
 # Terminal / Shell / CLI tools
 USE="${USE} bash-completion vim-syntax"
 
 # NetworkManager is better friends with dhclient
-USE="${USE} dhclient -dhcpcd"
+USE="${USE} networkmanager dhclient -dhcpcd"
 
 # Desktop features
 USE="${USE} zeroconf"
