@@ -64,7 +64,8 @@ src_prepare() {
 		"${FILESDIR}/${PN}-6.30.223.141-eth-to-wlan.patch" \
 		"${FILESDIR}/${PN}-6.30.223.141-gcc.patch" \
 		"${FILESDIR}/${PN}-6.30.223.248-r3-Wno-date-time.patch" \
-		"${FILESDIR}/${PN}-6.30.223.248-r3-linux-3.15-3.18.patch"
+		"${FILESDIR}/${PN}-6.30.223.248-r3-linux-3.15-3.18.patch" \
+		"${FILESDIR}/${PN}-6.30.223.248-r3-linux-4.0.patch"
 
 	epatch_user
 }
