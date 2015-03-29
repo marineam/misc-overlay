@@ -7,3 +7,6 @@ media-gfx/sane-backends avahi
 net-dns/avahi autoipd mdnsresponder-compat utils
 
 sys-apps/systemd curl elfutils gcrypt http importd lzma nat
+
+# required by plymouth
+x11-libs/libdrm libkms
