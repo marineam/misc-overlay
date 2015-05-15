@@ -16,7 +16,7 @@ USE="${USE} bash-completion vim-syntax"
 USE="${USE} networkmanager dhclient -dhcpcd"
 
 # Desktop features
-USE="${USE} zeroconf"
+USE="${USE} zeroconf -tracker"
 
 # Don't trust CAcert by default
 USE="${USE} -cacert"
