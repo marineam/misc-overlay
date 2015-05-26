@@ -10,3 +10,6 @@ sys-apps/systemd curl elfutils gcrypt http importd lzma nat
 
 # required by plymouth
 x11-libs/libdrm libkms
+
+sys-boot/plymouth gdm
+gnome-base/gdm plymouth
