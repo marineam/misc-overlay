@@ -32,4 +32,6 @@ USE="${USE} -input_devices_keyboard -input_devices_mouse"
 QEMU_SOFTMMU_TARGETS="x86_64 i386"
 
 LINGUAS="en en_US"
-FEATURES="parallel-install splitdebug"
+FEATURES="ccache parallel-install splitdebug"
+CCACHE_COMPRESS=1
+CCACHE_COMPILERCHECK=content
