@@ -6,3 +6,6 @@ dev-python/git-review
 
 # for building shim
 app-crypt/pesign
+
+# keep perms on /var/tmp/ccache correct, 3.1.x does not.
+=dev-util/ccache-3.2.2
