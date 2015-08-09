@@ -1,5 +1,5 @@
 gnome-base/gnome -classic
-gnome-base/gnome-extra-apps -games -tracker
+gnome-base/gnome-extra-apps -games -share -tracker
 
 # required by media-libs/cogl-1.18.2-r1[gles2]
 # required by net-im/empathy-3.12.7
