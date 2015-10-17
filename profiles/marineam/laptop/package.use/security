@@ -1,1 +1,4 @@
 app-crypt/gnupg smartcard
+
+# required by yubikey-neo-manager
+dev-python/pyside webkit

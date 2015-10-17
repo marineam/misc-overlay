@@ -1,7 +1,5 @@
-sys-auth/yubikey-personalization-gui
+app-crypt/libu2f-host
+app-crypt/libykneomgr
+app-crypt/yubikey-neo-manager
 sys-auth/ykpers
-sys-auth/libyubikey
-sys-auth/libykneomgr
-
-# required by sys-auth/libykneomgr
-=dev-util/gengetopt-2.22.6
+sys-auth/yubikey-personalization-gui
