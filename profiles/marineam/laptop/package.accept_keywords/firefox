@@ -3,3 +3,6 @@ dev-libs/nss
 
 # for firefox 40
 =media-libs/libpng-1.6.18
+
+# oh the joy of plugins
+www-plugins/google-talkplugin
