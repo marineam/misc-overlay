@@ -4,7 +4,7 @@ CXXFLAGS="-O2 -pipe -march=core-avx-i"
 USE=""
 
 # Silly defaults that shouldn't be enabled
-USE="${USE} -gpm -ldap -sendmail"
+USE="${USE} -gpm -ldap -modules -sendmail"
 
 # Basic system options
 USE="${USE} cryptsetup wifi vaapi vdpau xvmc hidpi"
