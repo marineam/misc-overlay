@@ -1,22 +1,6 @@
-gnome-base/gnome -classic
+gnome-base/gnome -classic -cups
 gnome-base/gnome-extra-apps -games -share -tracker
 
-# required by media-libs/cogl-1.18.2-r1[gles2]
-# required by net-im/empathy-3.12.7
-# required by gnome-base/gnome-core-apps-3.14.0
-# required by gnome-base/gnome-3.14.0
-# required by @selected
-# required by @world (argument)
-=media-libs/mesa-10.3.7-r1 gles2
-# required by x11-wm/mutter-3.14.3[kms]
-# required by gnome-base/gnome-3.14.0
-# required by @selected
-# required by @world (argument)
->=media-libs/clutter-1.20.0 egl
-# required by media-libs/clutter-1.20.0[egl]
-# required by net-im/empathy-3.12.7
-# required by gnome-base/gnome-core-apps-3.14.0
-# required by gnome-base/gnome-3.14.0
-# required by @selected
-# required by @world (argument)
->=media-libs/cogl-1.18.2-r1 gles2
+# pulls in samba...
+gnome-base/gnome-control-center -cups
+gnome-base/gnome-core-apps -cups
