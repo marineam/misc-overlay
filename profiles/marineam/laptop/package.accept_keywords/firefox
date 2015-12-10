@@ -1,6 +1,9 @@
 www-client/firefox
 dev-libs/nss
 
+# firefox 42
+=dev-libs/nspr-4.10.10-r1
+
 # for firefox 40
 =media-libs/libpng-1.6.18
 

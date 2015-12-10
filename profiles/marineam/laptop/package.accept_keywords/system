@@ -3,11 +3,9 @@ sys-boot/gummiboot
 sys-boot/plymouth
 sys-kernel/dracut
 
-~sys-apps/util-linux-2.25.2
-~sys-apps/util-linux-2.26.1
-~sys-apps/util-linux-2.26.2
-
-=sys-apps/hwids-20150421
+# systemd 228
+=sys-apps/util-linux-2.27.1
+=app-arch/lz4-0_p131
 
 # for systemd >= 222
 =dev-libs/libgudev-230
