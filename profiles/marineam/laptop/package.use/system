@@ -6,7 +6,7 @@ net-print/hplip scanner snmp
 media-gfx/sane-backends avahi
 net-dns/avahi autoipd mdnsresponder-compat utils gtk3
 
-sys-apps/systemd curl elfutils gcrypt http importd lzma nat
+sys-apps/systemd curl elfutils gcrypt gnuefi http importd lzma nat
 
 # required by plymouth
 x11-libs/libdrm libkms
