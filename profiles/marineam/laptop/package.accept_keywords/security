@@ -5,3 +5,5 @@ app-crypt/yubikey-neo-manager
 app-crypt/yubikey-piv-manager
 sys-auth/ykpers
 sys-auth/yubikey-personalization-gui
+
+=dev-libs/engine_pkcs11-0.2.0
