@@ -4,3 +4,6 @@ gnome-base/gnome-extra-apps -games -share -tracker
 # pulls in samba...
 gnome-base/gnome-control-center -cups
 gnome-base/gnome-core-apps -cups
+
+# media-gfx/simple-scan
+dev-libs/libgusb vala
