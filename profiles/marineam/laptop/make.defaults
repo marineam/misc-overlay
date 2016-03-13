@@ -7,7 +7,7 @@ USE=""
 USE="${USE} -gpm -ldap -modules -sendmail"
 
 # Basic system options
-USE="${USE} cryptsetup wifi vaapi vdpau xvmc hidpi"
+USE="${USE} cryptsetup wifi vaapi vdpau xvmc xinerama hidpi"
 
 # Terminal / Shell / CLI tools
 USE="${USE} bash-completion vim-syntax"
