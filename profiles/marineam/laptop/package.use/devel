@@ -1,7 +1,8 @@
 dev-vcs/git tk
 app-emulation/qemu virtfs xattr
 
-sys-libs/zlib abi_x86_32
+# static needed by openwrt, no idea what needed 32bit
+sys-libs/zlib static-libs abi_x86_32
 
 # for building shim
 dev-libs/nss utils
