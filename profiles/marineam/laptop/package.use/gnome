@@ -2,8 +2,9 @@ gnome-base/gnome -classic
 gnome-base/gnome-extra-apps -games -share -tracker
 
 # install as little samba as possible, used by gnome+cups and wine
-net-fs/samba -* client netapi smbclient
-net-fs/cifs-utils -*
+# "-* client smbclient" is what we want but -* doesn't work in profiles.
+net-fs/samba -acl -aio -fam -pam -server -winbind
+net-fs/cifs-utils -acl -ads -caps -caps-ng
 
 # media-gfx/simple-scan
 dev-libs/libgusb vala
