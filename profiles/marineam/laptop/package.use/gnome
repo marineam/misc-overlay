@@ -1,5 +1,4 @@
-gnome-base/gnome -classic
-gnome-base/gnome-extra-apps -games -share -tracker
+gnome-base/gnome -classic -extras
 
 # install as little samba as possible, used by gnome+cups and wine
 # "-* client smbclient" is what we want but -* doesn't work in profiles.
