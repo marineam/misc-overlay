@@ -11,6 +11,7 @@
 =x11-base/xorg-server-1.18*
 =x11-drivers/xf86-input-libinput-0.19*
 =x11-drivers/xf86-video-intel-2.99.917*
+=x11-drivers/xf86-video-nouveau-1.0.12*
 =x11-libs/gdk-pixbuf-2.34*
 =x11-libs/gtk+-3.20*
 =x11-wm/mutter-3.20*
