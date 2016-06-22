@@ -9,9 +9,6 @@ USE="${USE} -gpm -ldap -modules -sendmail"
 # Basic system options
 USE="${USE} cryptsetup wifi vaapi vdpau xvmc xinerama hidpi"
 
-# Live on the wild side
-USE="${USE} wayland"
-
 # Terminal / Shell / CLI tools
 USE="${USE} bash-completion vim-syntax"
 
