@@ -1,12 +1,4 @@
-sys-apps/systemd
+#sys-apps/systemd
 sys-boot/gummiboot
 sys-boot/plymouth
 sys-kernel/dracut
-
-# systemd 228
-=sys-apps/util-linux-2.27.1
-=app-arch/lz4-0_p131
-
-# for systemd >= 222
-=dev-libs/libgudev-230
-=virtual/libgudev-230
