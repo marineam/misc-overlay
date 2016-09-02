@@ -6,3 +6,6 @@ sys-libs/zlib static-libs abi_x86_32
 
 # for building shim
 dev-libs/nss utils
+
+# for afl
+sys-devel/llvm clang
