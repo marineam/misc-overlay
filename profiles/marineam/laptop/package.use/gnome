@@ -2,8 +2,13 @@ gnome-base/gnome -classic -extras
 
 # install as little samba as possible, used by gnome+cups and wine
 # "-* client smbclient" is what we want but -* doesn't work in profiles.
-net-fs/samba -acl -aio -fam -pam -server -winbind
+# In samba-4 the server use flag is gone so this doesn't strip much :-(
+net-fs/samba -acl -aio -fam -pam -server -winbind client
 net-fs/cifs-utils -acl -ads -caps -caps-ng
+# required by >=samba-4
+sys-libs/ntdb python
+sys-libs/tevent python
+sys-libs/tdb python
 
 # media-gfx/simple-scan
 dev-libs/libgusb vala
